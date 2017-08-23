@@ -13,8 +13,7 @@
   [disabled]="!allowNewServer"
   (click)="onCreateServer()">Add button</button>
 <!-- <p>{{ serverCreationStatus }}</p> -->
-<!-- *ngIf = the star on the front indicates that it is a structural directive 
+<!-- *ngIf = the star on the front indicates that it is a structural directive, meaning,
 			 that changes the DOM -->
 <p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
